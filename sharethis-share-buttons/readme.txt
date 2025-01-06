@@ -5,9 +5,9 @@ Tags: social buttons, sharethis, share this, social sharing, share buttons, soci
 Author URI: https://sharethis.com/
 Author: ShareThis
 Requires at least: 5.5
-Tested up to: 6.5.3
-Stable tag: 2.3.2
-Version: 2.3.2
+Tested up to: 6.7.1
+Stable tag: 2.3.3
+Version: 2.3.3
 
 License: GPLv2 or later
 
