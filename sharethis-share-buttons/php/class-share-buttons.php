@@ -1291,6 +1291,10 @@ class Share_Buttons {
 				'color'    => '#32506d',
 				'selected' => 'false',
 			),
+			'bluesky'         => array(
+				'color'    => '#097AFE',
+				'selected' => 'false',
+			),
 			'digg'            => array(
 				'color'    => '#262626',
 				'selected' => 'false',
@@ -1321,6 +1325,10 @@ class Share_Buttons {
 			),
 			'trello'          => array(
 				'color'    => '#0D63DE',
+				'selected' => 'false',
+			),
+			'threads'         => array(
+				'color'    => '#000000',
 				'selected' => 'false',
 			),
 			'viber'           => array(
