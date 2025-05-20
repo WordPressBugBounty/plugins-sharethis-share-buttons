@@ -3,7 +3,7 @@
  * Plugin Name: ShareThis Share Buttons
  * Plugin URI: https://sharethis.com/
  * Description: Grow your website traffic with share buttons for 40+ social channels including Facebook, LinkedIn, Twitter, WhatsApp, and more.
- * Version: 2.3.4
+ * Version: 2.3.5
  * Author: ShareThis
  * Author URI: https://sharethis.com/
  * Text Domain: sharethis-share-buttons
@@ -28,7 +28,7 @@
 /**
  * Plugin version constant.
  */
-const SHARETHIS_SHARE_BUTTONS_VERSION = '2.3.4';
+const SHARETHIS_SHARE_BUTTONS_VERSION = '2.3.5';
 
 if ( version_compare( phpversion(), '5.3', '>=' ) ) {
 	require_once __DIR__ . '/instance.php';
@@ -53,10 +53,7 @@ function _sharethis_share_buttons_php_version_error() {
  * @return string
  */
 function _sharethis_share_buttons_php_version_text() {
-	return __(
-		'ShareThis Share Buttons plugin error: Your version of PHP is too old to run this plugin. You must be running PHP 5.3 or higher.',
-		'sharethis-share-buttons'
-	);
+	return 'ShareThis Share Buttons plugin error: Your version of PHP is too old to run this plugin. You must be running PHP 5.3 or higher.';
 }
 
 /**

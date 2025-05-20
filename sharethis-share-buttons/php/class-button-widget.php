@@ -32,7 +32,7 @@ class Button_Widget extends \WP_Widget {
 
 		$widget_options = array(
 			'classname'   => 'st_button_widget',
-			'description' => esc_html__( 'Add ShareThis share buttons to your sidebar.', 'sharethis-share-buttons' ),
+			'description' => esc_html( 'Add ShareThis share buttons to your sidebar.' ),
 		);
 		parent::__construct(
 			'st_button_widget',

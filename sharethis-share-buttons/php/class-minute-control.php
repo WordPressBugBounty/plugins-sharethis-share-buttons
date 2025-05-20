@@ -64,7 +64,7 @@ class Minute_Control {
 					wp_json_encode(
 						array(
 							'postid' => $post->ID,
-							'nonce'  => wp_create_nonce( META_PREFIX ),
+							'nonce'  => wp_create_nonce( $this->plugin->meta_prefix ),
 						)
 					)
 				)
@@ -258,7 +258,7 @@ class Minute_Control {
 	 * @return string
 	 */
 	private function get_inline_container( $settings, $type, $post = '' ) {
-		$data_url = 'sharethis_excerpt' === $type && '' !== $post ? esc_attr( 'data-url=' . get_permalink( $post->ID ) ) : '';
+		$data_url = 'sharethis_excerpt' === $type && false === empty( $post ) ? esc_attr( 'data-url=' . get_permalink( $post->ID ) ) : '';
 		$margin_t = isset( $settings[ "{$type}_margin_top" ] ) ? $settings[ "{$type}_margin_top" ] . 'px' : '';
 		$margin_b = isset( $settings[ "{$type}_margin_bottom" ] ) ? $settings[ "{$type}_margin_bottom" ] . 'px' : '';
 		$margin   = '';

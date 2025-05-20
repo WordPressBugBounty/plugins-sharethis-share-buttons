@@ -66,7 +66,6 @@ var MinuteControl = ( function( $, wp ) {
 		 * @param placement
 		 */
 		updateList: function( type, checked, placement ) {
-
 			// Update specifide list per checked.
 			wp.ajax.post(
 				'update_list',

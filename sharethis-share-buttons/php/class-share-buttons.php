@@ -85,8 +85,9 @@ class Share_Buttons {
 	 * @param object $button_widget Button Widget class.
 	 */
 	public function __construct( $plugin, $button_widget ) {
-		$this->button_widget = $button_widget;
+
 		$this->plugin        = $plugin;
+		$this->button_widget = $button_widget;
 		$this->menu_slug     = 'sharethis-inline-sticky';
 		$this->set_settings();
 		$this->set_networks();
@@ -114,20 +115,11 @@ class Share_Buttons {
 		// Sections config.
 		$this->setting_sections = array(
 			'<span id="Inline" class="st-arrow">&#9658;</span>' .
-			esc_html__(
-				'Inline Share Buttons',
-				'sharethis-share-buttons'
-			),
+			esc_html( 'Inline Share Buttons' ),
 			'<span id="Sticky" class="st-arrow">&#9658;</span>' .
-			esc_html__(
-				'Sticky Share Buttons',
-				'sharethis-share-buttons'
-			),
+			esc_html( 'Sticky Share Buttons' ),
 			'<span id="GDPR" class="st-arrow">&#9658;</span>' .
-			esc_html__(
-				'GDPR Compliance Tool',
-				'sharethis-share-buttons'
-			),
+			esc_html( 'GDPR Compliance Tool' ),
 		);
 
 		// Setting configs.
@@ -761,56 +753,49 @@ class Share_Buttons {
 
 		switch ( $subtype ) {
 			case '':
-				$description  = esc_html__( 'WordPress Display Settings', 'sharethis-share-buttons' );
+				$description  = esc_html( 'WordPress Display Settings' );
 				$description .= '<span>';
-				$description .= esc_html__(
-					'Use these settings to automatically include or restrict the display of ',
-					'sharethis-share-buttons'
-				) . esc_html( $type ) . esc_html__(
-					' Share Buttons on specific pages of your site.',
-					'sharethis-share-buttons'
+				$description .= esc_html(
+					'Use these settings to automatically include or restrict the display of '
+				) . esc_html( $type ) . esc_html(
+					' Share Buttons on specific pages of your site.'
 				);
 				$description .= '</span>';
 				break;
 			case 'shortcode':
-				$description  = esc_html__( 'Shortcode', 'sharethis-share-buttons' );
+				$description  = esc_html( 'Shortcode' );
 				$description .= '<span>';
-				$description .= esc_html__(
-					'Use this shortcode to deploy your inline share buttons in a widget, or WYSIWYG editor.',
-					'sharethis-share-buttons'
+				$description .= esc_html(
+					'Use this shortcode to deploy your inline share buttons in a widget, or WYSIWYG editor.'
 				);
 				$description .= '</span>';
 				break;
 			case 'template':
-				$description  = esc_html__( 'PHP', 'sharethis-share-buttons' );
+				$description  = esc_html( 'PHP' );
 				$description .= '<span>';
-				$description .= esc_html__(
-					'Use this PHP snippet to include your inline share buttons anywhere else in your template.',
-					'sharethis-share-buttons'
+				$description .= esc_html(
+					'Use this PHP snippet to include your inline share buttons anywhere else in your template.'
 				);
 				$description .= '</span>';
 				break;
 			case 'social':
-				$description  = esc_html__( 'Social networks and button styles', 'sharethis-share-buttons' );
+				$description  = esc_html( 'Social networks and button styles' );
 				$description .= '<span>';
-				$description .= esc_html__(
-					'Login to ShareThis Platform to add, remove or re-order social networks in your ',
-					'sharethis-share-buttons'
-				) . esc_html( $type ) . esc_html__(
-					' Share buttons.  You may also update the alignment, size, labels and count settings.',
-					'sharethis-share-buttons'
+				$description .= esc_html(
+					'Login to ShareThis Platform to add, remove or re-order social networks in your '
+				) . esc_html( $type ) . esc_html(
+					' Share buttons.  You may also update the alignment, size, labels and count settings.'
 				);
 				$description .= '</span>';
 				break;
 			case 'property':
-				$description  = esc_html__( 'Property ID', 'sharethis-share-buttons' );
+				$description  = esc_html( 'Property ID' );
 				$description .= '<span>';
-				$description .= esc_html__(
-					'We use this unique ID to identify your property. Copy it from your ',
-					'sharethis-share-buttons'
+				$description .= esc_html(
+					'We use this unique ID to identify your property. Copy it from your '
 				);
 				$description .= '<a class="st-support" href="https://platform.sharethis.com/settings?utm_source=sharethis-plugin&utm_medium=sharethis-plugin-page&utm_campaign=property-settings" target="_blank">';
-				$description .= esc_html__( 'ShareThis platform settings', 'sharethis-share-buttons' );
+				$description .= esc_html( 'ShareThis platform settings' );
 				$description .= '</a></span>';
 				break;
 			case 'share_buttons':

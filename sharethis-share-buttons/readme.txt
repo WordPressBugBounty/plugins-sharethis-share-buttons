@@ -5,9 +5,9 @@ Tags: social buttons, sharethis, share this, social sharing, share buttons, soci
 Author URI: https://sharethis.com/
 Author: ShareThis
 Requires at least: 5.5
-Tested up to: 6.7.1
-Stable tag: 2.3.4
-Version: 2.3.4
+Tested up to: 6.8.1
+Stable tag: 2.3.5
+Version: 2.3.5
 
 License: GPLv2 or later
 
@@ -72,6 +72,12 @@ Questions? Submit an inquiry through our support forum and our team will be happ
 We cache your ShareThis platform button configurations (social networks, button size, labels etc.) to optimize their performance. Sometimes changes you make on the ShareThis platform take a couple minutes to update on your site. Also, if you activate a new button type from the settings page you may experience a similar lag.
 
 == Changelog ==
+
+= 2.3.5 =
+* Fix text domain warning.
+* Fix metabox controls.
+* Fix post warning.
+* Test to 6.8.1.
 
 = 2.3.4 =
 * Add Bluesky and Threads networks
