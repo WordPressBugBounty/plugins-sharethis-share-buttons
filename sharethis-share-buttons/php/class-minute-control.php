@@ -424,7 +424,7 @@ class Minute_Control {
 		global $post;
 
 		if ( is_admin() && ! wp_doing_ajax() ) {
-			return;
+			return $excerpt;
 		}
 
 		// Get inline settings.
