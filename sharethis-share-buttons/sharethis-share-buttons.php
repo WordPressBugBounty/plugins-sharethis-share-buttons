@@ -3,7 +3,7 @@
  * Plugin Name: ShareThis Share Buttons
  * Plugin URI: https://sharethis.com/
  * Description: Grow your website traffic with share buttons for 40+ social channels including Facebook, LinkedIn, Twitter, WhatsApp, and more.
- * Version: 2.3.6
+ * Version: 2.3.7
  * Author: ShareThis
  * Author URI: https://sharethis.com/
  * Text Domain: sharethis-share-buttons

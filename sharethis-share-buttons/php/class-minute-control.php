@@ -64,7 +64,7 @@ class Minute_Control {
 					wp_json_encode(
 						array(
 							'postid' => $post->ID,
-							'nonce'  => wp_create_nonce( $this->plugin->meta_prefix ),
+							'nonce'  => wp_create_nonce( META_PREFIX ),
 						)
 					)
 				)

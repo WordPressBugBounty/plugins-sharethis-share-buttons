@@ -52,7 +52,7 @@
 			</label>
 		</div>
 	<?php endif; ?>
-	<a href="<?php echo esc_url( admin_url( 'admin.php?page=sharethis-share-buttons' ) ); ?>">
+	<a href="<?php echo esc_url( admin_url( 'admin.php?page=sharethis-inline-sticky-share-buttons' ) ); ?>">
 		<?php esc_html_e( 'Update your default settings', 'sharethis-share-buttons' ); ?>
 	</a>
 </div>

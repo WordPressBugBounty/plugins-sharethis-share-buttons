@@ -10,7 +10,7 @@ namespace ShareThisShareButtons;
 define( 'ASSET_PREFIX', strtolower( preg_replace( '/\B([A-Z])/', '-$1', __NAMESPACE__ ) ) );
 define( 'META_PREFIX', strtolower( preg_replace( '/\B([A-Z])/', '_$1', __NAMESPACE__ ) ) );
 define( 'DIR_PATH', dirname( __FILE__ ) . '/' );
-define( 'DIR_URL', '/wp-content/plugins/sharethis-share-buttons/' );
+define( 'DIR_URL', trailingslashit( plugins_url( '', __FILE__ ) ) );
 
 global $sharethis_share_buttons_plugin;
 
