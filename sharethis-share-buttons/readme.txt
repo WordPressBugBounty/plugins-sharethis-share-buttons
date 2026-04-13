@@ -1,18 +1,17 @@
 === ShareThis Share Buttons ===
 Plugin Name: ShareThis Share Buttons
 Contributors: sharethis, scottstorebloom, scottmweaver
-Tags: social buttons, sharethis, share this, social sharing, share buttons, social media buttons, sharing tools
+Tags: social buttons, sharethis, share this, social sharing, share buttons
 Author URI: https://sharethis.com/
 Author: ShareThis
 Requires at least: 5.5
-Tested up to: 6.8.2
-Stable tag: 2.3.7
-Version: 2.3.7
+Tested up to: 6.9
+Stable tag: 2.3.8
+Version: 2.3.8
 
 License: GPLv2 or later
 
-Grow your website traffic and engagement by enabling one-click sharing with the free ShareThis Share Buttons plugin. The plugin is free (no upgrades available) and there is no registration is required!
-
+Boost website traffic and engagement with free ShareThis Share Buttons. One-click sharing, no signup required, no paid upgrades, and easy to use.
 == Description ==
 
 Make it easy for your audience to share your content across 40+ of the most popular social channels including Facebook, WhatsApp, Twitter, and Pinterest.
@@ -72,6 +71,11 @@ Questions? Submit an inquiry through our support forum and our team will be happ
 We cache your ShareThis platform button configurations (social networks, button size, labels etc.) to optimize their performance. Sometimes changes you make on the ShareThis platform take a couple minutes to update on your site. Also, if you activate a new button type from the settings page you may experience a similar lag.
 
 == Changelog ==
+
+= 2.3.8 =
+* Test in 6.9.
+* Fix settings sanitization.
+* Fix readme.
 
 = 2.3.7 =
 * Fix dir path

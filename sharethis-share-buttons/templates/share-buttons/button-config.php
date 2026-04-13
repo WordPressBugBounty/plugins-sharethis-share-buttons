@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Platform button configurations
  *
@@ -28,7 +32,7 @@ $classes[] = strtolower( $button ) . '-platform platform-config-wrapper';
 
 <?php if ( 'inline' === $button ) : ?>
 	<p class="st-preview-message manual-select engage">
-		⇧ <?php echo esc_html__( 'Preview: click and drag to reorder' ); ?> ⇧
+		⇧ <?php echo esc_html__( 'Preview: click and drag to reorder', 'sharethis-share-buttons' ); ?> ⇧
 	</p>
 	<?php
 endif;

@@ -1,11 +1,15 @@
 <?php
+namespace ShareThisShareButtons;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Instantiates the ShareThis Share Buttons plugin
  *
  * @package ShareThisShareButtons
  */
-
-namespace ShareThisShareButtons;
 
 define( 'ASSET_PREFIX', strtolower( preg_replace( '/\B([A-Z])/', '-$1', __NAMESPACE__ ) ) );
 define( 'META_PREFIX', strtolower( preg_replace( '/\B([A-Z])/', '_$1', __NAMESPACE__ ) ) );

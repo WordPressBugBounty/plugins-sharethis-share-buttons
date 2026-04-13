@@ -125,38 +125,46 @@ class Share_Buttons {
 		// Setting configs.
 		$this->setting_fields = array(
 			array(
-				'id_suffix'   => 'inline_settings',
-				'description' => $this->get_descriptions( 'Inline' ),
-				'callback'    => 'config_settings',
-				'section'     => 'share_button_section_1',
-				'arg'         => 'inline',
+				'id_suffix'         => 'inline_settings',
+				'description'       => $this->get_descriptions( 'Inline' ),
+				'callback'          => 'config_settings',
+				'section'           => 'share_button_section_1',
+				'arg'               => 'inline',
+				'sanitize_callback' => 'sanitize_array_setting',
+				'default'           => array(),
 			),
 			array(
-				'id_suffix'   => 'sticky_settings',
-				'description' => $this->get_descriptions( 'Sticky' ),
-				'callback'    => 'config_settings',
-				'section'     => 'share_button_section_2',
-				'arg'         => 'sticky',
+				'id_suffix'         => 'sticky_settings',
+				'description'       => $this->get_descriptions( 'Sticky' ),
+				'callback'          => 'config_settings',
+				'section'           => 'share_button_section_2',
+				'arg'               => 'sticky',
+				'sanitize_callback' => 'sanitize_array_setting',
+				'default'           => array(),
 			),
 			array(
-				'id_suffix'   => 'shortcode',
-				'description' => $this->get_descriptions( '', 'shortcode' ),
-				'callback'    => 'shortcode_template',
-				'section'     => 'share_button_section_1',
-				'arg'         => array(
+				'id_suffix'         => 'shortcode',
+				'description'       => $this->get_descriptions( '', 'shortcode' ),
+				'callback'          => 'shortcode_template',
+				'section'           => 'share_button_section_1',
+				'arg'               => array(
 					'type'  => 'shortcode',
 					'value' => '[sharethis-inline-buttons]',
 				),
+				'sanitize_callback' => 'sanitize_text_field_setting',
+				'default'           => '',
 			),
 			array(
-				'id_suffix'   => 'template',
-				'description' => $this->get_descriptions( '', 'template' ),
-				'callback'    => 'shortcode_template',
-				'section'     => 'share_button_section_1',
-				'arg'         => array(
+				'id_suffix'         => 'template',
+				'description'       => $this->get_descriptions( '', 'template' ),
+				'callback'          => 'shortcode_template',
+				'section'           => 'share_button_section_1',
+				'arg'               => array(
 					'type'  => 'template',
 					'value' => '<?php echo sharethis_inline_buttons(); ?>',
 				),
+				'sanitize_callback' => 'sanitize_text_field_setting',
+				'default'           => '',
 			),
 		);
 	}
@@ -167,55 +175,60 @@ class Share_Buttons {
 	public function inline_setting_fields() {
 		return array(
 			array(
-				'id_suffix' => 'inline_post_top',
-				'title'     => esc_html__( 'Top of post body', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'inline_post_top',
+				'title'             => esc_html__( 'Top of post body', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'   => 'checked="checked"',
 					'false'  => '',
 					'margin' => true,
 				),
 			),
 			array(
-				'id_suffix' => 'inline_post_bottom',
-				'title'     => esc_html__( 'Bottom of post body', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'inline_post_bottom',
+				'title'             => esc_html__( 'Bottom of post body', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'   => '',
 					'false'  => 'checked="checked"',
 					'margin' => true,
 				),
 			),
 			array(
-				'id_suffix' => 'inline_page_top',
-				'title'     => esc_html__( 'Top of page body', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'inline_page_top',
+				'title'             => esc_html__( 'Top of page body', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'   => '',
 					'false'  => 'checked="checked"',
 					'margin' => true,
 				),
 			),
 			array(
-				'id_suffix' => 'inline_page_bottom',
-				'title'     => esc_html__( 'Bottom of page body', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'inline_page_bottom',
+				'title'             => esc_html__( 'Bottom of page body', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'   => '',
 					'false'  => 'checked="checked"',
 					'margin' => true,
 				),
 			),
 			array(
-				'id_suffix' => 'excerpt',
-				'title'     => esc_html__( 'Include in excerpts', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'excerpt',
+				'title'             => esc_html__( 'Include in excerpts', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'   => '',
 					'false'  => 'checked="checked"',
 					'margin' => true,
@@ -230,89 +243,100 @@ class Share_Buttons {
 	public function sticky_setting_fields() {
 		return array(
 			array(
-				'id_suffix' => 'sticky_home',
-				'title'     => esc_html__( 'Home Page', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'sticky_home',
+				'title'             => esc_html__( 'Home Page', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'  => 'checked="checked"',
 					'false' => '',
 				),
 			),
 			array(
-				'id_suffix' => 'sticky_post',
-				'title'     => esc_html__( 'Posts', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'sticky_post',
+				'title'             => esc_html__( 'Posts', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'  => 'checked="checked"',
 					'false' => '',
 				),
 			),
 			array(
-				'id_suffix' => 'sticky_custom_posts',
-				'title'     => esc_html__( 'Custom Post Types', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'sticky_custom_posts',
+				'title'             => esc_html__( 'Custom Post Types', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'  => 'checked="checked"',
 					'false' => '',
 				),
 			),
 			array(
-				'id_suffix' => 'sticky_page',
-				'title'     => esc_html__( 'Pages', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'sticky_page',
+				'title'             => esc_html__( 'Pages', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'  => 'checked="checked"',
 					'false' => '',
 				),
 			),
 			array(
-				'id_suffix' => 'sticky_page_off',
-				'title'     => esc_html__( 'Exclude specific pages:', 'sharethis-share-buttons' ),
-				'callback'  => 'list_cb',
-				'type'      => array(
+				'id_suffix'         => 'sticky_page_off',
+				'title'             => esc_html__( 'Exclude specific pages:', 'sharethis-share-buttons' ),
+				'callback'          => 'list_cb',
+				'type'              => array(
 					'single' => 'page',
 					'multi'  => 'pages',
 				),
+				'sanitize_callback' => 'sanitize_array_setting',
+				'default'           => array(),
 			),
 			array(
-				'id_suffix' => 'sticky_category',
-				'title'     => esc_html__( 'Category archive pages', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'sticky_category',
+				'title'             => esc_html__( 'Category archive pages', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'  => 'checked="checked"',
 					'false' => '',
 				),
 			),
 			array(
-				'id_suffix' => 'sticky_category_off',
-				'title'     => esc_html__( 'Exclude specific category archives:', 'sharethis-share-buttons' ),
-				'callback'  => 'list_cb',
-				'type'      => array(
+				'id_suffix'         => 'sticky_category_off',
+				'title'             => esc_html__( 'Exclude specific category archives:', 'sharethis-share-buttons' ),
+				'callback'          => 'list_cb',
+				'type'              => array(
 					'single' => 'category',
 					'multi'  => 'categories',
 				),
+				'sanitize_callback' => 'sanitize_array_setting',
+				'default'           => array(),
 			),
 			array(
-				'id_suffix' => 'sticky_tags',
-				'title'     => esc_html__( 'Tags Archives', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'sticky_tags',
+				'title'             => esc_html__( 'Tags Archives', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'  => 'checked="checked"',
 					'false' => '',
 				),
 			),
 			array(
-				'id_suffix' => 'sticky_author',
-				'title'     => esc_html__( 'Author pages', 'sharethis-share-buttons' ),
-				'callback'  => 'onoff_cb',
-				'type'      => '',
-				'default'   => array(
+				'id_suffix'         => 'sticky_author',
+				'title'             => esc_html__( 'Author pages', 'sharethis-share-buttons' ),
+				'callback'          => 'onoff_cb',
+				'type'              => '',
+				'sanitize_callback' => 'sanitize_checkbox_setting',
+				'default'           => array(
 					'true'  => 'checked="checked"',
 					'false' => '',
 				),
@@ -472,9 +496,9 @@ class Share_Buttons {
 	public function settings_api_init() {
 		// Register sections.
 		foreach ( $this->setting_sections as $index => $title ) {
-			// Since the index starts at 0, let's increment it by 1.
 			$i       = $index + 1;
 			$section = "share_button_section_{$i}";
+			$arg     = '';
 
 			switch ( $i ) {
 				case 1:
@@ -488,7 +512,6 @@ class Share_Buttons {
 					break;
 			}
 
-			// Add setting section.
 			add_settings_section(
 				$section,
 				'',
@@ -498,11 +521,23 @@ class Share_Buttons {
 			);
 		}
 
-		// Register setting fields.
+		// Register setting fields with sanitization.
 		foreach ( $this->setting_fields as $setting_field ) {
-			register_setting( $this->menu_slug . '-share-buttons', $this->menu_slug . '_' . $setting_field['id_suffix'] );
+			$option_name = $this->menu_slug . '_' . $setting_field['id_suffix'];
+
+			register_setting(
+				$this->menu_slug . '-share-buttons',
+				$option_name,
+				array(
+					'sanitize_callback' => isset( $setting_field['sanitize_callback'] )
+						? array( $this, $setting_field['sanitize_callback'] )
+						: array( $this, 'sanitize_text_field_setting' ),
+					'default' => isset( $setting_field['default'] ) ? $setting_field['default'] : '',
+				)
+			);
+
 			add_settings_field(
-				$this->menu_slug . '_' . $setting_field['id_suffix'],
+				$option_name,
 				$setting_field['description'],
 				array( $this, $setting_field['callback'] ),
 				$this->menu_slug . '-share-buttons',
@@ -511,9 +546,78 @@ class Share_Buttons {
 			);
 		}
 
-		// Register omit settings.
-		register_setting( $this->menu_slug . '-share-buttons', $this->menu_slug . '_sticky_page_off' );
-		register_setting( $this->menu_slug . '-share-buttons', $this->menu_slug . '_sticky_category_off' );
+		// Register omit settings with sanitization.
+		register_setting(
+			$this->menu_slug . '-share-buttons',
+			$this->menu_slug . '_sticky_page_off',
+			array(
+				'sanitize_callback' => array( $this, 'sanitize_checkbox_setting' ),
+				'default'           => 0,
+			)
+		);
+
+		register_setting(
+			$this->menu_slug . '-share-buttons',
+			$this->menu_slug . '_sticky_category_off',
+			array(
+				'sanitize_callback' => array( $this, 'sanitize_checkbox_setting' ),
+				'default'           => 0,
+			)
+		);
+	}
+
+	/**
+	 * Sanitize plain text settings.
+	 *
+	 * @param mixed $value Raw setting value.
+	 * @return string
+	 */
+	public function sanitize_text_field_setting( $value ) {
+		return sanitize_text_field( wp_unslash( $value ) );
+	}
+
+	/**
+	 * Sanitize checkbox settings.
+	 *
+	 * @param mixed $value Raw setting value.
+	 * @return int
+	 */
+	public function sanitize_checkbox_setting( $value ) {
+		return ! empty( $value ) ? 1 : 0;
+	}
+
+	/**
+	 * Sanitize textarea settings.
+	 *
+	 * @param mixed $value Raw setting value.
+	 * @return string
+	 */
+	public function sanitize_textarea_setting( $value ) {
+		return sanitize_textarea_field( wp_unslash( $value ) );
+	}
+
+	/**
+	 * Sanitize URL settings.
+	 *
+	 * @param mixed $value Raw setting value.
+	 * @return string
+	 */
+	public function sanitize_url_setting( $value ) {
+		return esc_url_raw( wp_unslash( $value ) );
+	}
+
+	/**
+	 * Sanitize array settings.
+	 *
+	 * @param mixed $value Raw setting value.
+	 * @return array
+	 */
+	public function sanitize_array_setting( $value ) {
+		if ( ! is_array( $value ) ) {
+			return array();
+		}
+
+		return array_map( 'sanitize_text_field', wp_unslash( $value ) );
 	}
 
 	/**
@@ -678,8 +782,8 @@ class Share_Buttons {
 		if ( isset( $button['id'] ) && 'share_button_section_3' === $button['id'] ) {
 			// User type options.
 			$user_types = array(
-				'eu'     => esc_html__( 'Only visitors in the EU', 'sharethis-custom' ),
-				'always' => esc_html__( 'All visitors globally', 'sharethis-custom' ),
+				'eu'     => esc_html__( 'Only visitors in the EU', 'sharethis-share-buttons' ),
+				'always' => esc_html__( 'All visitors globally', 'sharethis-share-buttons' ),
 			);
 
 			$vendor_data = $this->get_vendors();
@@ -1152,7 +1256,7 @@ class Share_Buttons {
 						/* translators: %1$s is the general settings url. */
 						esc_html__(
 							'Your ShareThis Share Button plugin requires %1$s',
-							'sharethis-share-button'
+							'sharethis-share-buttons'
 						),
 						wp_kses_post( $gen_url )
 					);

@@ -1,4 +1,8 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Configure tool template for gdpr onboarding
  *
@@ -72,7 +76,7 @@
 				<?php
 				echo esc_html__(
 					'CHOOSE FORM COLOR',
-					'gdpr-complianc-tool'
+					'sharethis-share-buttons'
 				);
 				?>
 			</label>

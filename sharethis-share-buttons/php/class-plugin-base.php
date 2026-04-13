@@ -7,6 +7,10 @@
 
 namespace ShareThisShareButtons;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Class Plugin_Base
  *
