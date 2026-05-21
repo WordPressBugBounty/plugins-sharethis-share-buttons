@@ -1,76 +1,177 @@
 === ShareThis Share Buttons ===
 Plugin Name: ShareThis Share Buttons
 Contributors: sharethis, scottstorebloom, scottmweaver
-Tags: social buttons, sharethis, share this, social sharing, share buttons
+Tags: social buttons, social sharing, share buttons, sharethis, social media
 Author URI: https://sharethis.com/
 Author: ShareThis
 Requires at least: 5.5
-Tested up to: 6.9
-Stable tag: 2.3.8
-Version: 2.3.8
-
+Tested up to: 7.0
+Stable tag: 2.3.10
+Version: 2.3.10
 License: GPLv2 or later
 
-Boost website traffic and engagement with free ShareThis Share Buttons. One-click sharing, no signup required, no paid upgrades, and easy to use.
+Increase traffic and engagement with fast, responsive social share buttons for WordPress. No paid upgrades required.
+
 == Description ==
 
-Make it easy for your audience to share your content across 40+ of the most popular social channels including Facebook, WhatsApp, Twitter, and Pinterest.
+ShareThis Share Buttons makes it easy for visitors to share your content across the world’s most popular social networks.
 
-The free plugin includes the following features:
+Boost traffic, improve engagement, and expand the reach of your posts, pages, products, and content with beautifully designed social sharing buttons that are easy to install and customize.
 
-* Configure your buttons to stay anchored on the sidebar as visitors scroll or inline near your headline or product on the page for ideal visibility
-* Customize the design including the alignment, size, and color (unlimited options) to match your brand
-* Increase social shares with our responsive, lightweight, code which loads asynchronously and won’t slow down your site.
-* Select your preferred language from over 15 options (English, German, Spanish, French, Italian, Japanese, Korean, Portuguese, Russian, Chinese, Dutch, Arabic, Bengali, Hindi, Turkish, and Vietnamese).
-* Page and post editor controls which give you the power to enable or disable your buttons on specific posts and pages regardless of your default settings.
+The plugin is lightweight, mobile responsive, GDPR friendly, and optimized for performance with asynchronous loading that will not slow down your website.
 
-Start expanding the reach of your content organically and grow the audience of your WordPress website with the ShareThis Share Buttons plugin.
+No coding required.
+
+= Key Features =
+
+* One-click sharing across 40+ social networks
+* Sticky and inline share button layouts
+* Lightweight asynchronous loading for fast performance
+* Mobile responsive design
+* Gutenberg compatible
+* Custom colors, alignment, and sizing options
+* Multilingual support with 15+ languages
+* Per-page and per-post controls
+* Shortcodes and PHP integration
+* GDPR compliance options included
+
+= Supported Networks =
+
+Share content across major platforms including:
+
+* Facebook
+* Twitter / X
+* WhatsApp
+* Pinterest
+* LinkedIn
+* Reddit
+* Threads
+* Bluesky
+* Mastodon
+* Messenger
+* Snapchat
+* Telegram
+* Email
+* And many more
+
+= Inline Share Buttons =
+
+Inline Share Buttons can be displayed directly inside your content for maximum visibility and engagement.
+
+Features include:
+
+* Display buttons above or below content
+* Adjustable spacing and margins
+* Alignment controls
+* Custom button sizes and colors
+* Gutenberg block support
+* Shortcode support
+* PHP template snippets
+* Enable or disable buttons on individual posts and pages
+
+= Sticky Share Buttons =
+
+Sticky Share Buttons stay visible as visitors scroll through your content.
+
+Features include:
+
+* Sticky sidebar positioning
+* Enable on posts, pages, archives, products, and custom post types
+* Category and page exclusions
+* Responsive mobile behavior
+* Per-page display controls
+* Searchable page exclusion settings
+
+= Performance Focused =
+
+ShareThis Share Buttons are built with performance in mind.
+
+The plugin loads asynchronously to reduce render blocking and improve page speed performance while maintaining a seamless user experience.
+
+= Existing ShareThis User? =
+
+Already using ShareThis on your website?
+
+If you previously added ShareThis manually using embedded JavaScript, remember to remove any hardcoded scripts and inline share button containers after activating the plugin.
 
 == WordPress Features ==
 
-**Inline Share Buttons**
-
-* Enable or disable inline share buttons at the top and bottom of post and page bodies.
-* Pixel perfect placement with top and bottom margin controls.
-* Shortcode and PHP snippets.
-* Page and post editor controls let you enable or disable inline share buttons on specific posts and pages regardless of your default settings.
-
-**Sticky Share Buttons**
-
-* Enable or disable sticky share buttons on the home page, all pages, all posts, custom posts, author pages, as well as tag and category archives.
-* Exclude sticky share buttons on specific pages and category archives with a searchable page exception.
-* Page and post editor controls let you enable or disable sticky share buttons on specific posts and pages regardless of your default settings.
+* Gutenberg block support
+* Widget support
+* Shortcodes for manual placement
+* PHP template integration
+* Per-page enable and disable controls
+* Custom post type support
+* Multi-language support
+* GDPR controls
+* Mobile responsive layouts
 
 == Screenshots ==
 
-1. Inline share button design options.
-2. Inline share button settings.
-3. Example of Inline share buttons.
-4. Sticky share button design options.
-5. Sticky share button settings.
-6. Example of Sticky share buttons.
-7. Share button controls included on post and page editors.
-8. Consent management platforom settings.
+1. Inline Share Button design options
+2. Inline Share Button settings
+3. Example of Inline Share Buttons
+4. Sticky Share Button design options
+5. Sticky Share Button settings
+6. Example of Sticky Share Buttons
+7. Share Button controls in the post and page editor
+8. Consent management and GDPR settings
 
 == Installation ==
 
-Install ShareThis Share Buttons just like any other plugin. Simply download the file directly from this page or search for us in the WordPress directory and click "Install". After you install and activate the plugin, simply configure your buttons and create an account.
-
-If you’re already using the new ShareThis buttons, and want to migrate to our WordPress plugin, we’ve got your back. Install the plugin, then from the first configuration screen click, connect to an existing property. Login, and select your property from the list. We’ll sync your settings from our platform. Don’t forget to remove the hard coded JS, and any hard coded inline share button divs!
-
-== Privacy ==
-
-By creating an account with ShareThis, you agree to our [terms of use](https://sharethis.com/publisher-terms-of-use/) which includes the ability to keep track of user interactions with our buttons. You can read our privacy policy here: [https://www.sharethis.com/privacy/](https://sharethis.com/privacy/)
-
-Questions? Submit an inquiry through our support forum and our team will be happy to assist.
+1. Install the plugin from the WordPress Plugin Directory or upload the plugin zip file manually.
+2. Activate the plugin through the WordPress Plugins menu.
+3. Open the ShareThis Share Buttons settings page.
+4. Configure your preferred button styles and placement.
+5. Save your settings and your Share Buttons will appear automatically on your website.
 
 == Frequently Asked Questions ==
 
-**I reconfigured my buttons on the ShareThis platform, but nothing happened on my site. What’s going on here?**
+= Do Share Buttons work on mobile devices? =
 
-We cache your ShareThis platform button configurations (social networks, button size, labels etc.) to optimize their performance. Sometimes changes you make on the ShareThis platform take a couple minutes to update on your site. Also, if you activate a new button type from the settings page you may experience a similar lag.
+Yes. ShareThis Share Buttons are fully responsive and optimized for mobile devices, tablets, and desktops.
+
+= Can I customize the appearance of the buttons? =
+
+Yes. You can customize colors, size, alignment, spacing, positioning, and button layout directly from the plugin settings.
+
+= Can I disable buttons on specific pages or posts? =
+
+Yes. The plugin includes page and post editor controls that let you enable or disable buttons on individual pieces of content.
+
+= Does the plugin support Gutenberg? =
+
+Yes. ShareThis Share Buttons includes Gutenberg block support for adding inline buttons directly inside the editor.
+
+= I updated my button settings but changes are not showing immediately. Why? =
+
+ShareThis caches button configurations to improve performance. Changes made through the ShareThis platform may take a few minutes to appear on your website.
+
+= Do I need coding knowledge to use this plugin? =
+
+No. The plugin is designed for easy setup and configuration without coding experience.
+
+== Privacy ==
+
+By creating a ShareThis account, you agree to the ShareThis Terms of Use:
+https://sharethis.com/publisher-terms-of-use/
+
+ShareThis may collect interaction data related to button engagement and usage.
+
+Read the ShareThis Privacy Policy here:
+https://www.sharethis.com/privacy/
+
+Need help? Visit the WordPress support forum and our team will be happy to assist you.
 
 == Changelog ==
+
+= 2.3.10 =
+* Test wp ver 7
+
+= 2.3.9 =
+* Add mastodon.
+* Remove iorbix, koapp, blm, skype, surfingbird
+* Refresh readme.
 
 = 2.3.8 =
 * Test in 6.9.

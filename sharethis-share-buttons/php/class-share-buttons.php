@@ -1388,20 +1388,12 @@ class Share_Buttons {
 				'color'    => '#262626',
 				'selected' => 'false',
 			),
-			'iorbix'          => array(
-				'color'    => '#364447',
-				'selected' => 'false',
-			),
 			'kakao'           => array(
 				'color'    => '#F9DD4A',
 				'selected' => 'false',
 			),
 			'kindleit'        => array(
 				'color'    => '#363C3D',
-				'selected' => 'false',
-			),
-			'kooapp'          => array(
-				'color'    => '#FACB05',
 				'selected' => 'false',
 			),
 			'outlook'         => array(
@@ -1524,6 +1516,10 @@ class Share_Buttons {
 				'color'    => '#00c300',
 				'selected' => 'false',
 			),
+			'mastodon'        => array(
+				'color'    => '#3088d4',
+				'selected' => 'false',
+			),
 			'microsoftteams'  => array(
 				'color'    => '#515bc1',
 				'selected' => 'false',
@@ -1560,14 +1556,6 @@ class Share_Buttons {
 				'color'    => '#005baa',
 				'selected' => 'false',
 			),
-			'surfingbird'     => array(
-				'color'    => '#6dd3ff',
-				'selected' => 'false',
-			),
-			'skype'           => array(
-				'color'    => '#00aff0',
-				'selected' => 'false',
-			),
 			'telegram'        => array(
 				'color'    => '#37AEE2',
 				'selected' => 'false',
@@ -1588,10 +1576,6 @@ class Share_Buttons {
 				'color'    => '#4EC034',
 				'selected' => 'false',
 				'url'      => 'wechat.com/',
-			),
-			'blm'             => array(
-				'color'    => '#000000',
-				'selected' => 'false',
 			),
 			'livejournal'     => array(
 				'color'    => '#00b0ea',
