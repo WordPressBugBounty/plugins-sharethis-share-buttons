@@ -5,9 +5,9 @@ Tags: social buttons, social sharing, share buttons, sharethis, social media
 Author URI: https://sharethis.com/
 Author: ShareThis
 Requires at least: 5.5
-Tested up to: 7.0
-Stable tag: 2.3.11
-Version: 2.3.11
+Tested up to: 7.1
+Stable tag: 2.3.12
+Version: 2.3.12
 License: GPLv2 or later
 
 Increase traffic and engagement with fast, responsive social share buttons for WordPress. No paid upgrades required.
@@ -187,8 +187,12 @@ Need help? Visit the WordPress support forum and our team will be happy to assis
 
 == Changelog ==
 
+= 2.3.12 =
+* Tested wp 7.1
+
 = 2.3.11 =
 * Add AI assistant share buttons: ChatGPT, Claude, Copilot, Gemini, Grok, Perplexity.
+* Copilot and Gemini copy the prompt to the clipboard, since neither accepts a prompt in a URL.
 
 = 2.3.10 =
 * Test wp ver 7
