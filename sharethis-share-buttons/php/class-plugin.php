@@ -113,7 +113,26 @@ class Plugin extends Plugin_Base {
 	 * @return string
 	 */
 	public static function getFormattedNetworkImage( $title ) {
-		return 'https://platform-cdn.sharethis.com/img/' . self::getPlatformName( $title ) . '.svg';
+		$name = self::getPlatformName( $title );
+
+		// AI assistants ship with the plugin because the CDN has no asset for them.
+		if ( in_array( $name, self::getAiNetworks(), true ) ) {
+			return DIR_URL . 'assets/networks/' . $name . '.svg';
+		}
+
+		return 'https://platform-cdn.sharethis.com/img/' . $name . '.svg';
+	}
+
+	/**
+	 * Helper to get the AI assistant networks.
+	 *
+	 * These open a chat prefilled with a prompt about the page in a new tab,
+	 * rather than a share dialog in a popup window.
+	 *
+	 * @return array
+	 */
+	public static function getAiNetworks() {
+		return array( 'chatgpt', 'claude', 'copilot', 'gemini', 'grok', 'perplexity' );
 	}
 
 	/**

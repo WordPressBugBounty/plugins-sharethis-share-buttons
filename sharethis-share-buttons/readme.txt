@@ -6,15 +6,15 @@ Author URI: https://sharethis.com/
 Author: ShareThis
 Requires at least: 5.5
 Tested up to: 7.0
-Stable tag: 2.3.10
-Version: 2.3.10
+Stable tag: 2.3.11
+Version: 2.3.11
 License: GPLv2 or later
 
 Increase traffic and engagement with fast, responsive social share buttons for WordPress. No paid upgrades required.
 
 == Description ==
 
-ShareThis Share Buttons makes it easy for visitors to share your content across the world’s most popular social networks.
+ShareThis Share Buttons makes it easy for visitors to share your content across the world’s most popular social networks and AI assistants.
 
 Boost traffic, improve engagement, and expand the reach of your posts, pages, products, and content with beautifully designed social sharing buttons that are easy to install and customize.
 
@@ -25,6 +25,7 @@ No coding required.
 = Key Features =
 
 * One-click sharing across 40+ social networks
+* AI assistant buttons for ChatGPT, Claude, Copilot, Gemini, Grok, and Perplexity
 * Sticky and inline share button layouts
 * Lightweight asynchronous loading for fast performance
 * Mobile responsive design
@@ -53,6 +54,23 @@ Share content across major platforms including:
 * Telegram
 * Email
 * And many more
+
+= AI Assistant Buttons =
+
+Readers increasingly turn to AI assistants to summarize, translate, and ask questions about what they read.
+
+ShareThis now includes share buttons for the major AI assistants so visitors can open your page in the assistant of their choice:
+
+* ChatGPT
+* Claude
+* Copilot
+* Gemini
+* Grok
+* Perplexity
+
+AI assistant buttons work exactly like the social network buttons. Add them to your inline or sticky layouts, reorder them alongside your other networks, and apply your own colors and sizing.
+
+These buttons are turned off by default. Enable the ones you want from the network list on the Inline or Sticky Share Buttons settings screen.
 
 = Inline Share Buttons =
 
@@ -139,6 +157,10 @@ Yes. You can customize colors, size, alignment, spacing, positioning, and button
 
 Yes. The plugin includes page and post editor controls that let you enable or disable buttons on individual pieces of content.
 
+= How do I add the AI assistant buttons? =
+
+Open the Inline or Sticky Share Buttons settings screen and select ChatGPT, Claude, Copilot, Gemini, Grok, or Perplexity from the network list. They are turned off by default, so they will not appear on your site until you enable them and save your settings.
+
 = Does the plugin support Gutenberg? =
 
 Yes. ShareThis Share Buttons includes Gutenberg block support for adding inline buttons directly inside the editor.
@@ -164,6 +186,9 @@ https://www.sharethis.com/privacy/
 Need help? Visit the WordPress support forum and our team will be happy to assist you.
 
 == Changelog ==
+
+= 2.3.11 =
+* Add AI assistant share buttons: ChatGPT, Claude, Copilot, Gemini, Grok, Perplexity.
 
 = 2.3.10 =
 * Test wp ver 7

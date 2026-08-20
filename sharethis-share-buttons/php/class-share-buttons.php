@@ -1351,6 +1351,30 @@ class Share_Buttons {
 				'color'    => '#CB2027',
 				'selected' => 'true',
 			),
+			'chatgpt'         => array(
+				'color'    => '#000000',
+				'selected' => 'false',
+			),
+			'claude'          => array(
+				'color'    => '#D97757',
+				'selected' => 'false',
+			),
+			'copilot'         => array(
+				'color'    => '#0078D4',
+				'selected' => 'false',
+			),
+			'gemini'          => array(
+				'color'    => '#8E75B2',
+				'selected' => 'false',
+			),
+			'grok'            => array(
+				'color'    => '#000000',
+				'selected' => 'false',
+			),
+			'perplexity'      => array(
+				'color'    => '#1FB8CD',
+				'selected' => 'false',
+			),
 			'email'           => array(
 				'color'    => '#7d7d7d',
 				'selected' => 'true',
