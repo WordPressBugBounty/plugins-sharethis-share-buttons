@@ -6,8 +6,8 @@ Author URI: https://sharethis.com/
 Author: ShareThis
 Requires at least: 5.5
 Tested up to: 7.1
-Stable tag: 2.3.12
-Version: 2.3.12
+Stable tag: 2.3.13
+Version: 2.3.13
 License: GPLv2 or later
 
 Increase traffic and engagement with fast, responsive social share buttons for WordPress. No paid upgrades required.
@@ -186,6 +186,9 @@ https://www.sharethis.com/privacy/
 Need help? Visit the WordPress support forum and our team will be happy to assist you.
 
 == Changelog ==
+
+= 2.3.13 =
+* Add a Live Preview on WordPress.org so you can try the plugin in WordPress Playground before installing.
 
 = 2.3.12 =
 * Tested wp 7.1

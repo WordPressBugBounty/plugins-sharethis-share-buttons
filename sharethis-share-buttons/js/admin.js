@@ -522,11 +522,21 @@ var ShareButtons = ( function( $, wp ) {
 				button: button,
 				nonce: self.data.nonce
 			} ).always( function(response) {
-				self.loadPreview( 'submit', 'inline' );
-				self.loadPreview( 'submit', 'sticky' );
-				self.loadPreview( 'submit', 'gdpr' );
+				var save = function( buttonCode ) {
+					var done = $.Deferred();
 
-				window.location.reload();
+					$.when( self.loadPreview( 'submit', buttonCode ) ).always( done.resolve );
+
+					return done.promise();
+				};
+
+				save( 'inline' ).then( function() {
+					return save( 'sticky' );
+				} ).then( function() {
+					return save( 'gdpr' );
+				} ).then( function() {
+					window.location.reload();
+				} );
 			} );
 
 		});
@@ -658,7 +668,18 @@ var ShareButtons = ( function( $, wp ) {
 	 */
 	getConfig: function() {
 	  var result = null,
-		callExtra = 'secret=' + this.data.secret;
+		callExtra = 'secret=' + this.data.secret,
+		local;
+
+	  if ( this.data.demo ) {
+		local = this.data.buttonConfig || {};
+
+		return {
+		  'inline-share-buttons': local.inline,
+		  'sticky-share-buttons': local.sticky,
+		  'gdpr-compliance-tool-v2': local.gdpr,
+		};
+	  }
 
 	  if ( 'undefined' === this.data.secret || undefined === this.data.secret ) {
 		callExtra = 'token=' + this.data.token;
@@ -753,6 +774,7 @@ var ShareButtons = ( function( $, wp ) {
 		wpConfig,
 		upConfig,
 		theData,
+		saved,
 		enabled = false,
 		buttonCode = button.toLowerCase();
 
@@ -980,7 +1002,7 @@ var ShareButtons = ( function( $, wp ) {
 			location.reload();
 		  }.bind( this ) );
 		} else {
-		  wp.ajax.post( 'set_button_config', {
+		  saved = wp.ajax.post( 'set_button_config', {
 			button: buttonCode,
 			config: config,
 			fresh: this.data.fresh,
@@ -1027,19 +1049,28 @@ var ShareButtons = ( function( $, wp ) {
 
 			theData = JSON.stringify( theData );
 
-			// Send new button status value.
-			$.ajax( {
-			  url: 'https://platform-api.sharethis.com/v1.0/property/product',
-			  method: 'POST',
-			  async: false,
-			  contentType: 'application/json; charset=utf-8',
-			  data: theData,
-			  success: function () {
-				if ( 'turnon' === type || 'turnoff' === type ) {
+			// Demo sites share one property, so changes are only saved to this site.
+			if ( this.data.demo ) {
+			  if ( 'turnon' === type || 'turnoff' === type ) {
+				saved.always( function() {
 				  location.reload();
-				}
+				} );
 			  }
-			} );
+			} else {
+			  // Send new button status value.
+			  $.ajax( {
+				url: 'https://platform-api.sharethis.com/v1.0/property/product',
+				method: 'POST',
+				async: false,
+				contentType: 'application/json; charset=utf-8',
+				data: theData,
+				success: function () {
+				  if ( 'turnon' === type || 'turnoff' === type ) {
+					location.reload();
+				  }
+				}
+			  } );
+			}
 		  }
 		}
 	  }
@@ -1084,6 +1115,8 @@ var ShareButtons = ( function( $, wp ) {
 		  self.loadPreview( '', buttonCode );
 		}
 	  } );
+
+	  return saved;
 	},
 
 	/**

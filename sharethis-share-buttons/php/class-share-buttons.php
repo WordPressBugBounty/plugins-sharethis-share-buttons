@@ -463,6 +463,7 @@ class Share_Buttons {
 						'nonce'         => wp_create_nonce( META_PREFIX ),
 						'fresh'         => get_option( 'sharethis_fract' ),
 						'first'         => get_option( 'sharethis_first_product', false ),
+						'demo'          => Plugin::isDemoMode(),
 					)
 				)
 			)
